@@ -1,0 +1,75 @@
+[System]
+Name='fuzzysystem'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=14
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='L*'
+Range=[0 100]
+NumMFs=2
+MF1='dark':'zmf',[0 15]
+MF2='bright':'smf',[85 100]
+
+[Input2]
+Name='C*'
+Range=[0 100]
+NumMFs=2
+MF1='unsaturated':'zmf',[9.2 90.2]
+MF2='saturated':'smf',[10.2536997885835 90.4]
+
+[Input3]
+Name='h'
+Range=[0 360]
+NumMFs=8
+MF1='red':'dsigmf',[0.216670756931766 22.5 -0.19 338]
+MF2='yellow':'gaussmf',[19.1097405064805 90]
+MF3='green':'gaussmf',[19.11 180]
+MF4='blue':'gaussmf',[19.11 270]
+MF5='orange':'gaussmf',[19.1097405064804 45]
+MF6='grellow':'gaussmf',[19.11 135]
+MF7='breen':'gaussmf',[19.11 225]
+MF8='violet':'gaussmf',[19.1097405064804 315]
+
+[Input4]
+Name='de_{orig}'
+Range=[0 8]
+NumMFs=5
+MF1='nodiff':'trimf',[0 0 1]
+MF2='expdiff':'trimf',[0.15 1.25 2]
+MF3='unexpdiff':'trimf',[1.5 2.5 3.5]
+MF4='cleardiff':'trimf',[3 4.1 5]
+MF5='diffcolors':'sigmf',[7.24 5.04488372093023]
+
+[Output1]
+Name='de_{adj}'
+Range=[0 8]
+NumMFs=5
+MF1='nodiff':'trimf',[0 0 1]
+MF2='expdiff':'trimf',[0.5 1.25 2]
+MF3='unexpdiff':'trimf',[1.5 2.5 3.5]
+MF4='cleardiff':'trimf',[3 4.1 5]
+MF5='diffcolors':'sigmf',[7.24 5.04488372093023]
+
+[Rules]
+1 0 0 0, 1 (1) : 1
+-1 2 2 3, 2 (1) : 1
+-1 2 4 2, 3 (1) : 1
+-1 1 0 2, 3 (1) : 1
+-1 1 0 3, 4 (1) : 1
+-1 2 8 2, 3 (1) : 1
+-1 2 4 3, 4 (1) : 1
+-1 2 8 3, 4 (1) : 1
+-1 2 2 4, 3 (1) : 1
+-1 2 2 5, 4 (1) : 1
+0 0 0 1, 1 (1) : 1
+0 0 0 2, 2 (1) : 1
+0 0 0 3, 3 (1) : 1
+0 0 0 4, 4 (1) : 1
