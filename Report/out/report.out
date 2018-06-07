@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Part I}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Introduction}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Step 1 - Generation of copies}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Step 2 - Feature extraction and selection}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Step 3 - Fitting network}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Part II}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Step 1 - E imprecisions}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Step 2 - Fuzzy sets and rules}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Fuzzy sets}{subsection.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Fuzzy rules}{subsection.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Step III - Fitting network with new data}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{Conclusion and examples}{}% 12
